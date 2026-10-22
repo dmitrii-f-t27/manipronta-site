@@ -48,6 +48,14 @@
   footer{padding:36px 0;color:var(--muted);font-size:13px}
   .tag{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:13px;color:var(--coral);margin:0 8px 8px 0}
   @media (max-width:760px){.grid{grid-template-columns:1fr}.hero{padding:36px 0 30px}}
+
+  .cat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:26px}
+  .cat-grid figure{margin:0;background:var(--plum2);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .cat-grid img{width:100%;height:auto;display:block;aspect-ratio:9/16;object-fit:cover}
+  .cat-grid figcaption{padding:10px 12px;font-size:14px;display:flex;flex-direction:column;gap:2px}
+  .cat-grid figcaption span{color:var(--muted);font-size:12px;font-family:ui-monospace,Menlo,monospace}
+  @media (max-width:900px){.cat-grid{grid-template-columns:repeat(3,1fr)}}
+  @media (max-width:560px){.cat-grid{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
@@ -114,6 +122,18 @@
         <li><span class="dot">•</span><span>Quer garantia de agenda cheia, renda ou menos faltas.</span></li>
         <li><span class="dot">•</span><span>Ainda não fez nenhuma unha e procura formação completa.</span></li>
       </ul>
+    </div>
+  </div>
+</section>
+
+
+<section id="cores">
+  <div class="wrap">
+    <div class="kicker">Catálogo de cores</div>
+    <h2>Nove cores, uma mão.</h2>
+    <p class="sub">O mesmo acabamento, do nude ao chocolate. Escolha pela cliente, não pelo hábito.</p>
+    <div class="cat-grid">
+      <figure><img src="catalogo/nude.webp" alt="Unhas com esmalte nude rosé" width="480" height="853" loading="lazy"><figcaption><strong>Nude rosé</strong><span>original</span></figcaption></figure><figure><img src="catalogo/bordo.webp" alt="Unhas com esmalte bordô" width="480" height="853" loading="lazy"><figcaption><strong>Bordô</strong><span>#5A0F1E</span></figcaption></figure><figure><img src="catalogo/leitoso.webp" alt="Unhas com esmalte branco leitoso" width="480" height="853" loading="lazy"><figcaption><strong>Branco leitoso</strong><span>#F2EDE4</span></figcaption></figure><figure><img src="catalogo/preto.webp" alt="Unhas com esmalte preto" width="480" height="853" loading="lazy"><figcaption><strong>Preto</strong><span>#111111</span></figcaption></figure><figure><img src="catalogo/vermelho.webp" alt="Unhas com esmalte vermelho cereja" width="480" height="853" loading="lazy"><figcaption><strong>Vermelho cereja</strong><span>#C1121F</span></figcaption></figure><figure><img src="catalogo/rosa.webp" alt="Unhas com esmalte rosa" width="480" height="853" loading="lazy"><figcaption><strong>Rosa</strong><span>#E8A0B4</span></figcaption></figure><figure><img src="catalogo/chrome.webp" alt="Unhas com esmalte chrome" width="480" height="853" loading="lazy"><figcaption><strong>Chrome</strong><span>#C9CED6</span></figcaption></figure><figure><img src="catalogo/pistache.webp" alt="Unhas com esmalte pistache" width="480" height="853" loading="lazy"><figcaption><strong>Pistache</strong><span>#A8C686</span></figcaption></figure><figure><img src="catalogo/chocolate.webp" alt="Unhas com esmalte chocolate" width="480" height="853" loading="lazy"><figcaption><strong>Chocolate</strong><span>#5A3A2E</span></figcaption></figure>
     </div>
   </div>
 </section>

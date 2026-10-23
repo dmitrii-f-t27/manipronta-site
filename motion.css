@@ -1,0 +1,22 @@
+/* motion.css — base states for motion.js. Hidden states apply only when JS runs (html.m-js),
+   so the page still reads without JavaScript. */
+.m-w{display:inline-block;white-space:nowrap}
+.m-u{display:inline-block;will-change:transform,opacity}
+.m-line{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
+.m-line>.m-u{display:block}
+html.m-js [data-reveal]:not([data-split]){opacity:0}
+html.m-js [data-split]:not([data-split-done]){opacity:0}
+html.m-js [data-split][data-split-done]{opacity:1}
+.m-pin{position:relative}
+.m-pin>.m-stage,.m-pin>:first-child{position:sticky;top:0;height:100vh;height:100lvh;overflow:hidden}
+[data-hscroll]{display:flex;width:max-content;will-change:transform}
+[data-marquee]{overflow:hidden;white-space:nowrap}
+[data-marquee]>*{display:inline-flex;will-change:transform}
+[data-parallax]{will-change:transform}
+.m-cursor-img{position:fixed;left:0;top:0;width:min(24vw,320px);aspect-ratio:4/5;pointer-events:none;z-index:90;opacity:0;overflow:hidden;border-radius:4px}
+.m-cursor-img img{width:100%;height:100%;object-fit:cover}
+/* preloader lift */
+.m-pre{position:fixed;inset:0;z-index:100;clip-path:inset(0 0 0 0);transition:clip-path 1.1s cubic-bezier(.76,0,.24,1)}
+.m-pre.m-pre-out{clip-path:inset(0 0 100% 0)}
+[data-pre-bar]{transform-origin:left center;transform:scaleX(0)}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}

@@ -1,211 +1,366 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Guia ManiPronta — acabamento de salão, do preparo à cor</title>
-<meta name="description" content="Guia em PDF para manicures: cutícula limpa, formato perfeito, arquitetura do gel e cor que dura. Conteúdo educativo, sem promessas de resultado.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#2B1626">
+<link rel="icon" href="data:,">
+<title>ManiPronta · Guia em PDF de técnica e cor para manicures</title>
+<meta name="description" content="Guia em PDF para manicures: preparo, cutícula, gel, formatos e cor. Checklist grátis, guia por R$ 47, 7 dias de garantia. Conteúdo educativo, sem promessa de resultado.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.3.19/dist/lenis.css">
+<link rel="stylesheet" href="motion.css">
 <style>
-  :root{
-    --plum:#2B1626; --plum2:#3A1E33; --coral:#F0866A; --cream:#F7EFEA;
-    --ink:#1E1119; --muted:#BFA9B6; --line:rgba(240,134,106,.25);
-  }
-  *{box-sizing:border-box}
-  html,body{margin:0;padding:0}
-  body{background:var(--plum);color:var(--cream);font-family:Arial,Helvetica,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
-  a{color:inherit}
-  .btn{display:inline-block;background:var(--coral);color:#2B1626;text-decoration:none;font-weight:700;
-       padding:18px 28px;border-radius:10px;font-size:18px;letter-spacing:.2px}
-  .btn:hover{filter:brightness(1.06)}
-  .btn.ghost{background:transparent;color:var(--coral);border:1px solid var(--coral)}
-  .kicker{color:var(--coral);text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:700}
-  h1{font-size:clamp(34px,5.4vw,60px);line-height:1.05;margin:14px 0 18px;letter-spacing:-1px}
-  h2{font-size:clamp(26px,3.4vw,38px);line-height:1.15;margin:0 0 18px;letter-spacing:-.5px}
-  h3{font-size:20px;margin:0 0 8px}
-  p{margin:0 0 14px}
-  .sub{font-size:clamp(17px,2.2vw,21px);color:#E8D9D2;max-width:760px}
-  .hero{padding:56px 0 44px;border-bottom:1px solid var(--line)}
-  .hero .logo{width:132px;height:auto;display:block;margin-bottom:26px}
-  .hero .actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:26px}
-  .note{font-size:14px;color:var(--muted);margin-top:12px}
-  section{padding:52px 0;border-bottom:1px solid var(--line)}
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-  .card{background:var(--plum2);border:1px solid var(--line);border-radius:14px;padding:24px}
-  .card p{color:#E8D9D2;margin:0}
-  .num{color:var(--coral);font-weight:700;font-size:13px;letter-spacing:1px}
-  .list{margin:0;padding:0;list-style:none}
-  .list li{padding:12px 0;border-bottom:1px solid var(--line);display:flex;gap:12px}
-  .list li:last-child{border-bottom:0}
-  .list .dot{color:var(--coral);font-weight:700}
-  .price{text-align:center;padding:58px 0}
-  .price .amount{font-size:clamp(48px,8vw,84px);font-weight:700;line-height:1;margin:8px 0 6px}
-  .price .terms{color:var(--muted);margin-bottom:26px}
-  .faq details{border-bottom:1px solid var(--line);padding:16px 0}
-  .faq summary{cursor:pointer;font-weight:700;font-size:17px;list-style:none}
-  .faq summary::-webkit-details-marker{display:none}
-  .faq p{margin:10px 0 0;color:#E8D9D2}
-  footer{padding:36px 0;color:var(--muted);font-size:13px}
-  .tag{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:13px;color:var(--coral);margin:0 8px 8px 0}
-  @media (max-width:760px){.grid,#degraus .grid{grid-template-columns:1fr!important}.hero{padding:36px 0 30px}}
+:root{--plum:#2B1626;--plum-2:#3A1E33;--coral:#F0866A;--ivory:#F7EFEA;--muted:#BFA9B6;
+  --serif:Georgia,"Times New Roman",serif;--sans:Arial,Helvetica,sans-serif;
+  --gut:clamp(16px,4vw,56px);--hh:calc(68px + env(safe-area-inset-top));--ease:cubic-bezier(.16,1,.3,1)}
+*{box-sizing:border-box;margin:0}
+html,body{background:var(--plum);color:var(--ivory)}
+body{font:400 16px/1.55 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--coral);outline-offset:3px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.03em}
+.eyebrow{font:700 11px/1 var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--coral)}
+.sec{padding:clamp(80px,14vh,160px) var(--gut);max-width:1400px;margin:0 auto}
+.sec>h2{font-size:clamp(36px,5.4vw,84px);line-height:.98;margin:18px 0 clamp(32px,6vh,64px);max-width:16ch}
+.cta{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;background:var(--coral);color:var(--plum);font:700 16px/1 var(--sans);padding:18px 28px;border-radius:999px;text-decoration:none}
+.cta i{width:8px;height:8px;border-radius:50%;background:var(--plum)}
 
-  .cat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:26px}
-  .cat-grid figure{margin:0;background:var(--plum2);border:1px solid var(--line);border-radius:12px;overflow:hidden}
-  .cat-grid img{width:100%;height:auto;display:block;aspect-ratio:9/16;object-fit:cover}
-  .cat-grid figcaption{padding:10px 12px;font-size:14px;display:flex;flex-direction:column;gap:2px}
-  .cat-grid figcaption span{color:var(--muted);font-size:12px;font-family:ui-monospace,Menlo,monospace}
-  @media (max-width:900px){.cat-grid{grid-template-columns:repeat(3,1fr)}}
-  @media (max-width:560px){.cat-grid{grid-template-columns:repeat(2,1fr)}}
+/* preloader */
+.m-pre{background:var(--plum);color:var(--ivory);display:grid;place-items:end start;padding:var(--gut)}
+.pre-n{font:400 clamp(96px,22vw,320px)/.8 var(--serif);letter-spacing:-.05em;font-variant-numeric:tabular-nums}
+.pre-bar{position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--coral)}
+.pre-l{position:absolute;top:var(--gut);left:var(--gut);width:56px;height:56px}
+
+/* header */
+.hdr{position:fixed;inset:0 0 auto;z-index:50;display:flex;justify-content:space-between;align-items:center;gap:12px;height:var(--hh);padding:env(safe-area-inset-top) var(--gut) 0;color:var(--ivory);background:transparent;transition:transform .45s var(--ease),background-color .3s,box-shadow .3s;pointer-events:none}
+.hdr>*{pointer-events:auto}
+.hdr.solid{background:var(--plum);box-shadow:0 1px 0 rgba(247,239,234,.14)}
+.hdr.hide{transform:translateY(-101%)}
+.hdr .logo{display:flex;align-items:center;gap:10px;font:700 14px/1 var(--sans);letter-spacing:.28em;text-transform:uppercase;text-decoration:none;white-space:nowrap}
+.hdr .logo img{width:32px;height:32px}
+.hdr .hc{font:700 13px/1 var(--sans);text-decoration:none;border:1px solid var(--ivory);border-radius:999px;padding:14px 18px;min-height:44px;display:inline-flex;align-items:center;white-space:nowrap}
+@media(max-width:400px){.hdr .logo{letter-spacing:.18em;font-size:13px}.hdr .hc{padding:14px 14px}}
+/* anchors and the price block never sit under the fixed bar */
+#top,.sec{scroll-margin-top:var(--hh)}
+#preco{padding-top:calc(var(--hh) + clamp(40px,8vh,96px))}
+
+/* 1 hero */
+.hero{position:relative;isolation:isolate;min-height:max(100svh,600px);overflow:hidden;display:grid;align-content:end;padding:calc(var(--hh) + 16px) var(--gut) clamp(32px,7vh,80px)}
+.glow{position:absolute;inset:-15% -10%;z-index:-1;background:radial-gradient(60% 50% at 78% 22%,rgba(240,134,106,.42),transparent 70%),radial-gradient(50% 50% at 10% 90%,rgba(58,30,51,.9),transparent 70%)}
+.hero h1{font-size:clamp(44px,9.4vw,160px);line-height:.92;margin:.35em 0 .35em;max-width:14ch}
+.hero-row{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;flex-wrap:wrap}
+.hero p.lede{max-width:40ch;font-size:clamp(16px,1.5vw,20px);color:var(--muted)}
+
+/* 2 film */
+.film .m-stage{display:grid;place-items:center;background:#1c0e18}
+.film .frame{height:100%;aspect-ratio:9/16;max-width:100vw;overflow:hidden;
+  --g:min(1, var(--p,0) * 4);
+  transform:scale(calc(.5 + .5 * var(--g)));border-radius:calc(32px * (1 - var(--g)))}
+.film video{width:100%;height:100%;object-fit:cover}
+.cap{position:absolute;max-width:min(32ch,80vw);
+  opacity:min(clamp(0,(var(--p,0) - var(--a)) * 14,1), clamp(0,(var(--b) - var(--p,0)) * 14,1));
+  translate:0 calc((1 - clamp(0,(var(--p,0) - var(--a)) * 14,1)) * 40px)}
+.cap small{display:block;font:700 11px/1 var(--sans);letter-spacing:.3em;text-transform:uppercase;margin-bottom:14px;color:var(--coral)}
+.cap h3{font-size:clamp(28px,3.4vw,52px);line-height:1;margin-bottom:16px}
+.cap ul{list-style:none;padding:0;font-size:15px;color:var(--ivory)}
+.cap li{padding:8px 0;border-top:1px solid rgba(247,239,234,.25)}
+.cap.l{left:var(--gut);bottom:18vh}.cap.r{right:var(--gut);top:20vh;text-align:right}
+@media(min-width:901px){.cap{max-width:calc((100vw - 100lvh * 9 / 16) / 2 - var(--gut) * 1.5)}}
+@media(max-width:900px){.cap{left:var(--gut)!important;right:var(--gut)!important;top:auto!important;bottom:9vh!important;text-align:left!important;max-width:none;text-shadow:0 2px 22px rgba(0,0,0,.7)}
+  .cap h3{font-size:30px;margin-bottom:10px}.cap li{padding:6px 0;font-size:14px}}
+.film .m-stage::after{content:"";position:absolute;inset:auto 0 0;height:68%;background:linear-gradient(transparent,rgba(28,14,24,.7) 35%,rgba(28,14,24,.94));pointer-events:none;display:none}
+@media(max-width:900px){.film .m-stage::after{display:block}}
+.film .cap{z-index:2}
+.film .bar{z-index:2;position:absolute;left:0;bottom:0;height:3px;background:var(--coral);width:calc(var(--p,0) * 100%)}
+
+/* 3 modules */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(14px,2vw,24px)}
+.mod{background:var(--plum-2);border-radius:18px;padding:28px 26px 30px;transform-style:preserve-3d}
+.mod b{display:block;font:400 14px/1 var(--sans);letter-spacing:.2em;color:var(--coral);margin-bottom:34px}
+.mod h3{font-size:clamp(24px,2.2vw,32px);line-height:1.05;margin-bottom:10px}
+.mod p{color:var(--muted);font-size:15px}
+
+/* 4 gallery */
+.gal{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:clamp(14px,2vw,28px);align-items:end}
+.gal figure .ph{overflow:hidden;border-radius:16px;background:var(--plum-2);aspect-ratio:3/4}
+.gal figure:first-child .ph{aspect-ratio:4/3}
+.gal .ph div{height:120%;margin-top:-10%}
+.gal img{width:100%;height:100%;object-fit:cover}
+.gal figcaption{margin-top:14px;font:400 18px/1.25 var(--serif);letter-spacing:-.01em}
+.gal small{display:block;font:400 13px/1.4 var(--sans);color:var(--muted);margin-top:4px;letter-spacing:0}
+@media(max-width:800px){.gal{grid-template-columns:1fr}.gal figure:first-child .ph,.gal figure .ph{aspect-ratio:4/5}}
+
+/* 5 price */
+.price{background:var(--plum-2);border-radius:28px;padding:clamp(32px,6vw,80px);display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(28px,5vw,80px);align-items:center}
+.price .amt{font:400 clamp(72px,12vw,180px)/.9 var(--serif);letter-spacing:-.05em;font-variant-numeric:tabular-nums}
+.price .amt sup{font-size:.28em;vertical-align:top;letter-spacing:0;margin-right:.15em;position:relative;top:.35em}
+.price ul{list-style:none;padding:0;margin:0 0 28px}
+.price li{padding:12px 0 12px 28px;border-top:1px solid rgba(247,239,234,.18);position:relative}
+.price li::before{content:"";position:absolute;left:0;top:21px;width:10px;height:10px;border-radius:50%;background:var(--coral)}
+.price .note{font-size:13px;color:var(--muted);margin-top:14px;max-width:44ch}
+
+/* 6 pix */
+.pix-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(20px,4vw,48px);align-items:start}
+.pix-card{background:var(--plum-2);border:1px solid rgba(247,239,234,.16);border-radius:24px;padding:clamp(20px,3vw,36px)}
+.pix-qr{text-align:center;background:#fff;color:var(--plum)}
+.pix-qr img{width:100%;max-width:340px;height:auto;margin:0 auto 16px}
+.pix-qr strong{font:400 clamp(28px,4vw,44px)/1 var(--serif);display:block}
+.pix-qr small{display:block;color:#6b5b64;margin-top:8px;font-size:12px}
+.pix-card h3{font-size:clamp(22px,2.4vw,30px);margin-bottom:14px}
+#pixcode{display:block;font:12px/1.5 ui-monospace,Menlo,monospace;word-break:break-all;background:rgba(0,0,0,.28);padding:14px;border-radius:12px;max-height:120px;overflow:auto;margin-bottom:18px;color:var(--ivory)}
+.pix-steps{padding-left:18px;margin:22px 0;color:var(--muted);font-size:14px}
+.pix-steps li{margin:8px 0}
+.pix-note{font-size:13px;color:var(--muted);margin-top:14px;max-width:48ch}
+@media(max-width:800px){.pix-grid{grid-template-columns:1fr}}
+@media(max-width:800px){.price{grid-template-columns:1fr}}
+
+/* 6 colour catalogue: 2 cols phone, 3 tablet, 5 desktop */
+#cores>h2{margin-bottom:18px}
+.cat-lede{max-width:46ch;color:var(--muted);font-size:clamp(16px,1.5vw,20px);margin-bottom:clamp(32px,6vh,64px)}
+.cat{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(12px,1.8vw,24px);list-style:none;padding:0}
+@media(min-width:640px){.cat{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(min-width:1100px){.cat{grid-template-columns:repeat(5,minmax(0,1fr))}}
+.cat figure{min-width:0}
+.cat .ph{overflow:hidden;border-radius:16px;background:var(--plum-2);aspect-ratio:4/5}
+.cat img{width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+.cat figcaption{margin-top:12px;display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.cat b{font:400 clamp(17px,1.5vw,20px)/1.2 var(--serif);letter-spacing:-.01em}
+.cat code{display:inline-flex;align-items:center;gap:7px;font:12px/1 ui-monospace,Menlo,monospace;color:var(--muted);letter-spacing:.04em}
+.cat code i{width:12px;height:12px;border-radius:50%;background:var(--c);box-shadow:0 0 0 1px rgba(247,239,234,.35)}
+
+
+.cta.ghost{background:transparent;color:var(--ivory);box-shadow:inset 0 0 0 1.5px rgba(247,239,234,.55)}
+.cta.ghost i{background:var(--coral)}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+@media(max-width:600px){.hero-cta{width:100%}.hero-cta .cta{width:100%}}
+.ribbon{margin:clamp(28px,6vh,56px) calc(var(--gut) * -1) 0;border-top:1px solid rgba(247,239,234,.16);border-bottom:1px solid rgba(247,239,234,.16);overflow:hidden}
+.ribbon .rt{display:flex;gap:clamp(28px,4vw,56px);padding:18px clamp(14px,2vw,28px);white-space:nowrap;width:max-content}
+.ribbon span{display:inline-flex;align-items:center;gap:12px;font:400 clamp(18px,2vw,26px)/1 var(--serif);letter-spacing:-.01em}
+.ribbon i{width:18px;height:18px;border-radius:50%;background:var(--c);box-shadow:0 0 0 1px rgba(247,239,234,.4)}
+/* problem manifesto */
+.manif{padding-top:clamp(96px,18vh,200px);padding-bottom:clamp(40px,8vh,96px)}
+.manif p.big{font:400 clamp(30px,5.2vw,82px)/1.04 var(--serif);letter-spacing:-.035em;max-width:20ch}
+.pains{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(14px,2vw,24px);margin-top:clamp(40px,8vh,80px)}
+.pains div{border-top:1px solid rgba(247,239,234,.28);padding-top:18px}
+.pains b{display:block;font:400 clamp(20px,2vw,26px)/1.15 var(--serif);margin-bottom:8px;letter-spacing:-.02em}
+.pains span{color:var(--muted);font-size:15px}
+/* ladder */
+.ladder{display:grid;grid-template-columns:1fr 1.25fr 1fr;gap:clamp(14px,2vw,24px);align-items:stretch}
+.step{background:var(--plum-2);border-radius:24px;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:14px;border:1px solid rgba(247,239,234,.12)}
+.step.main{background:var(--coral);color:var(--plum);border-color:transparent}
+.step .tag{font:700 11px/1 var(--sans);letter-spacing:.28em;text-transform:uppercase;color:var(--coral)}
+.step.main .tag{color:var(--plum)}
+.step h3{font-size:clamp(26px,2.6vw,38px);line-height:1}
+.step .pr{font:400 clamp(56px,7vw,112px)/.9 var(--serif);letter-spacing:-.05em;font-variant-numeric:tabular-nums}
+.step .pr sup{font-size:.28em;letter-spacing:0;vertical-align:top;position:relative;top:.4em;margin-right:.1em}
+.step p{font-size:15px;color:var(--muted)}
+.step.main p{color:rgba(43,22,38,.82)}
+.step ul{list-style:none;padding:0;margin:0}
+.step li{padding:9px 0 9px 22px;border-top:1px solid rgba(247,239,234,.16);position:relative;font-size:15px}
+.step.main li{border-top-color:rgba(43,22,38,.22)}
+.step li::before{content:"";position:absolute;left:0;top:17px;width:8px;height:8px;border-radius:50%;background:var(--coral)}
+.step.main li::before{background:var(--plum)}
+.step .cta{margin-top:auto;align-self:flex-start}
+.step.main .cta{background:var(--plum);color:var(--ivory)}
+.step.main .cta i{background:var(--coral)}
+.step .cta.ghost{color:var(--ivory)}
+.ladder-note{font-size:13px;color:var(--muted);margin-top:22px;max-width:70ch}
+@media(max-width:900px){.ladder{grid-template-columns:1fr}.step.main{order:-1}}
+.seller{display:block;margin-top:14px}
+.seller b{color:var(--ivory)}
+
+/* 7 faq */
+.faq{max-width:900px}
+.faq details{border-top:1px solid rgba(247,239,234,.22)}
+.faq details:last-child{border-bottom:1px solid rgba(247,239,234,.22)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;align-items:center;min-height:64px;padding:18px 0;font:400 clamp(20px,2.2vw,28px)/1.2 var(--serif);letter-spacing:-.02em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:300 30px/1 var(--sans);color:var(--coral);transition:transform .4s var(--ease)}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{padding:0 0 24px;color:var(--muted);max-width:64ch}
+
+/* 7 footer */
+.foot{background:#1c0e18;padding:clamp(56px,9vh,110px) var(--gut) calc(28px + env(safe-area-inset-bottom))}
+.foot h2{font-size:clamp(64px,20vw,320px);line-height:.85;letter-spacing:-.06em;overflow:hidden;padding-bottom:.06em}
+.foot .rl{display:block;height:1px;background:rgba(247,239,234,.3);margin:28px 0 18px}
+.foot p{font-size:13px;color:var(--muted);max-width:80ch}
+.foot .fr{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:16px;font-size:13px;color:var(--muted)}
 </style>
 </head>
 <body>
+<div class="m-pre" id="pre"><img class="pre-l" src="assets/logo-white.webp" alt=""><span class="pre-n" data-pre-count>000</span><span class="pre-bar" data-pre-bar></span></div>
 
-<header class="hero">
-  <div class="wrap">
-    <img class="logo" src="logo-white.png" alt="ManiPronta">
-    <div class="kicker">Guia completo em PDF</div>
-    <h1>Acabamento de salão, do preparo à cor.</h1>
-    <p class="sub">Para manicures que querem entregar cutícula limpa, formato perfeito e cor que dura — com um passo a passo claro, sem tentativa e erro.</p>
-    <div class="actions">
-      <a class="btn" href="checklist-manipronta.pdf" download>Baixar o checklist grátis</a>
-      <a class="btn ghost" href="#pix">Quero o guia — R$ 47</a>
+<header class="hdr"><a class="logo" href="#top" aria-label="ManiPronta"><img src="assets/logo-white.webp" alt="" width="32" height="32">ManiPronta</a><a class="hc" href="#pix">Guia · R$ 47</a></header>
+
+<main id="top">
+<section class="hero">
+  <div class="glow" data-parallax="0.1"></div>
+  <span class="eyebrow" data-reveal="rise" data-on="ready" data-delay="100">Guia em PDF · técnica e cor</span>
+  <h1 data-split="lines" data-reveal="up" data-on="ready" data-delay="200">Acabamento de salão, do preparo à cor.</h1>
+  <div class="hero-row">
+    <p class="lede" data-split="words" data-on="ready" data-delay="600" data-stagger="22">Guia em PDF para manicures: cutícula limpa, formato perfeito, arquitetura do gel e cor que dura.</p>
+    <div class="hero-cta" data-reveal="scale" data-on="ready" data-delay="1000">
+      <a class="cta" href="assets/checklist-manipronta.pdf" download data-magnetic="0.3"><i></i>Baixar o checklist grátis</a>
+      <a class="cta ghost" href="#pix"><i></i>Guia completo — R$ 47</a>
     </div>
-    <p class="note">Checklist de 12 pontos e tabela de subtons, grátis, sem cadastro. O guia completo é pago por Pix e enviado no direct após a confirmação.</p>
   </div>
-</header>
+  <div class="ribbon" aria-hidden="true" data-reveal="fade" data-on="ready" data-delay="1300"><div data-marquee="38"><div class="rt">
+    <span><i style="--c:#C98A86"></i>Nude rosé</span><span><i style="--c:#5A0F1E"></i>Bordô</span><span><i style="--c:#F2EDE4"></i>Branco leitoso</span><span><i style="--c:#111"></i>Preto</span><span><i style="--c:#C1121F"></i>Vermelho cereja</span><span><i style="--c:#E8A0B4"></i>Rosa</span><span><i style="--c:#C9CED6"></i>Chrome</span><span><i style="--c:#A8C686"></i>Pistache</span><span><i style="--c:#5A3A2E"></i>Chocolate</span>
+  </div></div></div>
+</section>
 
-<section>
-  <div class="wrap">
-    <div class="kicker">O problema</div>
-    <h2>Não é falta de talento. É falta de método.</h2>
-    <p class="sub">A maioria das manicures aprendeu olhando. Funciona até o dia em que a unha descasca na semana, a cutícula inflama ou o nude sai diferente do que a cliente pediu.</p>
-    <div class="grid" style="margin-top:26px">
-      <div class="card"><span class="num">01</span><h3>O gel levanta em dias</h3><p>Base mal preparada, excesso de produto ou arquitetura errada: o problema começa antes da cor.</p></div>
-      <div class="card"><span class="num">02</span><h3>A cutícula fica marcada</h3><p>Pressão demais, alicate no lugar errado, produto em contato com a pele. O resultado parece amador.</p></div>
-      <div class="card"><span class="num">03</span><h3>A cor nunca bate</h3><p>O nude certo depende do subtom da pele. Sem método, cada cliente é uma tentativa nova.</p></div>
-    </div>
+<section class="film" id="film" data-pin="480" aria-label="Três capítulos do guia">
+  <div class="m-stage">
+    <div class="frame"><video data-video-scrub data-range="0 0.9" src="assets/film.mp4" poster="assets/film-poster.jpg" muted playsinline preload="auto" aria-hidden="true"></video></div>
+    <div class="cap l" style="--a:.04;--b:.31"><small>01 · Preparo</small><h3>Base limpa, sem trauma.</h3><ul><li>Cutícula removida sem cortes</li><li>Superfície da unha preparada para aderir</li></ul></div>
+    <div class="cap r" style="--a:.34;--b:.78"><small>02 · Arquitetura</small><h3>Formato e estrutura.</h3><ul><li>Lixamento e curvatura da unha</li><li>Gel e poligel em camadas equilibradas</li></ul></div>
+    <div class="cap l" style="--a:.78;--b:.98"><small>03 · Cor</small><h3>Cor com método.</h3><ul><li>Escolha de tom por subtom de pele</li><li>Cura e selagem para durar</li></ul></div>
+    <span class="bar"></span>
   </div>
 </section>
 
-<section id="conteudo">
-  <div class="wrap">
-    <div class="kicker">O que tem dentro</div>
-    <h2>Seis módulos, um PDF só.</h2>
-    <div class="grid">
-      <div class="card"><span class="num">Módulo 1</span><h3>Anatomia e preparo</h3><p>Como a unha cresce, o que é ápex, por que a preparação define a durabilidade.</p></div>
-      <div class="card"><span class="num">Módulo 2</span><h3>Cutícula sem trauma</h3><p>Sequência segura, ferramentas, ângulo, o que evitar para não inflamar.</p></div>
-      <div class="card"><span class="num">Módulo 3</span><h3>Gel e poligel</h3><p>Base, camadas, arquitetura e os erros que fazem o produto levantar.</p></div>
-      <div class="card"><span class="num">Módulo 4</span><h3>Formas e lixamento</h3><p>Mendalam, quadrada, bailarina: como lixar mantendo simetria e estrutura.</p></div>
-      <div class="card"><span class="num">Módulo 5</span><h3>Cor com método</h3><p>Teoria da cor, subtom de pele, nude, french, chrome e combinações que funcionam.</p></div>
-      <div class="card"><span class="num">Módulo 6</span><h3>Durabilidade e correção</h3><p>Por que descasca, como consertar sem refazer tudo e como manter o brilho.</p></div>
+<section class="sec manif" id="problema">
+  <span class="eyebrow">O problema</span>
+  <p class="big" data-words-light>Não é falta de talento. É falta de método.</p>
+  <div class="pains">
+    <div data-reveal="rise"><b>O gel levanta em dias</b><span>Base mal preparada, excesso de produto ou arquitetura errada: o problema começa antes da cor.</span></div>
+    <div data-reveal="rise" data-delay="80"><b>A cutícula fica marcada</b><span>Pressão demais, alicate no lugar errado, produto na pele. O resultado parece amador.</span></div>
+    <div data-reveal="rise" data-delay="160"><b>A cor nunca bate</b><span>O nude certo depende do subtom. Sem método, cada cliente vira uma tentativa nova.</span></div>
+  </div>
+</section>
+
+<section class="sec" id="modulos">
+  <span class="eyebrow">Conteúdo do guia</span>
+  <h2 data-split="lines" data-reveal="up">Seis módulos, do básico ao acabamento.</h2>
+  <div class="grid">
+    <article class="mod" data-tilt="6" data-reveal="rise"><b>01</b><h3>Anatomia e preparo</h3><p>Como é a unha por dentro e como deixar a base pronta antes de qualquer produto.</p></article>
+    <article class="mod" data-tilt="6" data-reveal="rise" data-delay="70"><b>02</b><h3>Cutícula sem trauma</h3><p>Técnica, ferramentas e o que evitar para não machucar a cliente.</p></article>
+    <article class="mod" data-tilt="6" data-reveal="rise" data-delay="140"><b>03</b><h3>Gel e poligel</h3><p>Quantidade, posição e camadas para uma estrutura equilibrada.</p></article>
+    <article class="mod" data-tilt="6" data-reveal="rise"><b>04</b><h3>Formas e lixamento</h3><p>Quadrada, amendoada, oval: como chegar a cada formato com simetria.</p></article>
+    <article class="mod" data-tilt="6" data-reveal="rise" data-delay="70"><b>05</b><h3>Cor com método</h3><p>Como combinar tons com subtom de pele e aplicar sem manchas.</p></article>
+    <article class="mod" data-tilt="6" data-reveal="rise" data-delay="140"><b>06</b><h3>Durabilidade e correção</h3><p>Selagem, cura, causas de descolamento e como corrigir.</p></article>
+  </div>
+</section>
+
+<section class="sec" id="cores" aria-labelledby="cores-h">
+  <span class="eyebrow">Catálogo de cores</span>
+  <h2 id="cores-h" data-split="lines" data-reveal="up">Nove cores, uma mão.</h2>
+  <p class="cat-lede" data-reveal="rise" data-delay="120">O mesmo acabamento, do nude ao chocolate. Escolha pela cliente, não pelo hábito.</p>
+  <ul class="cat">
+    <li data-reveal="rise"><figure><div class="ph"><img src="assets/catalogo/nude.webp" alt="Unhas com esmalte nude rosé brilhante" width="720" height="1279" loading="lazy" decoding="async"></div><figcaption><b>Nude rosé</b><code style="--c:#C98A86"><i></i>original</code></figcaption></figure></li>
+    <li data-reveal="rise" data-delay="60"><figure><div class="ph"><img src="assets/catalogo/bordo.webp" alt="Unhas com esmalte bordô" width="720" height="1279" loading="lazy" decoding="async"></div><figcaption><b>Bordô</b><code style="--c:#5A0F1E"><i></i>#5A0F1E</code></figcaption></figure></li>
+    <li data-reveal="rise" data-delay="120"><figure><div class="ph"><img src="assets/catalogo/leitoso.webp" alt="Unhas com esmalte branco leitoso" width="720" height="1279" loading="lazy" decoding="async"></div><figcaption><b>Branco leitoso</b><code style="--c:#F2EDE4"><i></i>#F2EDE4</code></figcaption></figure></li>
+    <li data-reveal="rise" data-delay="180"><figure><div class="ph"><img src="assets/catalogo/preto.webp" alt="Unhas com esmalte preto" width="720" height="1279" loading="lazy" decoding="async"></div><figcaption><b>Preto</b><code style="--c:#111111"><i></i>#111111</code></figcaption></figure></li>
+    <li data-reveal="rise" data-delay="240"><figure><div class="ph"><img src="assets/catalogo/vermelho.webp" alt="Unhas com esmalte vermelho cereja" width="720" height="1279" loading="lazy" decoding="async"></div><figcaption><b>Vermelho cereja</b><code style="--c:#C1121F"><i></i>#C1121F</code></figcaption></figure></li>
+    <li data-reveal="rise"><figure><div class="ph"><img src="assets/catalogo/rosa.webp" alt="Unhas com esmalte rosa" width="720" height="1279" loading="lazy" decoding="async"></div><figcaption><b>Rosa</b><code style="--c:#E8A0B4"><i></i>#E8A0B4</code></figcaption></figure></li>
+    <li data-reveal="rise" data-delay="60"><figure><div class="ph"><img src="assets/catalogo/chrome.webp" alt="Unhas com acabamento chrome" width="720" height="1279" loading="lazy" decoding="async"></div><figcaption><b>Chrome</b><code style="--c:#C9CED6"><i></i>#C9CED6</code></figcaption></figure></li>
+    <li data-reveal="rise" data-delay="120"><figure><div class="ph"><img src="assets/catalogo/pistache.webp" alt="Unhas com esmalte verde pistache" width="720" height="1279" loading="lazy" decoding="async"></div><figcaption><b>Pistache</b><code style="--c:#A8C686"><i></i>#A8C686</code></figcaption></figure></li>
+    <li data-reveal="rise" data-delay="180"><figure><div class="ph"><img src="assets/catalogo/chocolate.webp" alt="Unhas com esmalte chocolate" width="720" height="1279" loading="lazy" decoding="async"></div><figcaption><b>Chocolate</b><code style="--c:#5A3A2E"><i></i>#5A3A2E</code></figcaption></figure></li>
+  </ul>
+</section>
+
+<section class="sec" id="galeria">
+  <span class="eyebrow">Na prática</span>
+  <h2 data-split="lines" data-reveal="up">Mãos reais, tons diferentes.</h2>
+  <div class="gal">
+    <figure data-reveal="rise"><div class="ph"><div data-parallax="0.06"><img src="assets/g1.webp" alt="Pés de várias pessoas com tons de pele diferentes, em círculo, unhas pintadas" width="1400" height="1050" loading="eager" decoding="async"></div></div><figcaption>Cor para cada tom de pele<small>O mesmo esmalte muda conforme o subtom.</small></figcaption></figure>
+    <figure data-reveal="rise" data-delay="100"><div class="ph"><div data-parallax="0.06"><img src="assets/g2.webp" alt="Mãos com luvas pretas lixando a unha de uma cliente, em close" width="900" height="1706" loading="eager" decoding="async"></div></div><figcaption>Lixamento controlado<small>Formato definido antes da cor.</small></figcaption></figure>
+    <figure data-reveal="rise" data-delay="200"><div class="ph"><div data-parallax="0.06"><img src="assets/g3.webp" alt="Close do preparo da unha com lixa, mão de cliente ao fundo" width="900" height="1706" loading="eager" decoding="async"></div></div><figcaption>Preparo na prática<small>Base limpa, produto aderindo melhor.</small></figcaption></figure>
+  </div>
+</section>
+
+<section class="sec" id="degraus">
+  <span class="eyebrow">Por onde começar</span>
+  <h2 data-split="lines" data-reveal="up">Do grátis ao curso.</h2>
+  <div class="ladder">
+    <article class="step" data-reveal="rise">
+      <span class="tag">Para começar</span>
+      <h3>Checklist grátis</h3>
+      <div class="pr"><sup>R$</sup>0</div>
+      <p>12 pontos para conferir cada unha em gel e a tabela de subtons. Uma página, sem cadastro.</p>
+      <a class="cta ghost" href="assets/checklist-manipronta.pdf" download><i></i>Baixar o PDF</a>
+    </article>
+    <article class="step main" data-reveal="rise" data-delay="90">
+      <span class="tag">Preço de entrada</span>
+      <h3>Guia ManiPronta</h3>
+      <div class="pr"><sup>R$</sup><span data-count="47">0</span></div>
+      <ul><li>6 módulos: preparo, cutícula, gel e poligel, formas, cor e durabilidade</li><li>3 bônus e o catálogo de 9 cores</li><li>PDF enviado no direct depois do Pix</li><li>7 dias de garantia, com reembolso</li></ul>
+      <a class="cta" href="#pix" data-magnetic="0.3"><i></i>Quero o guia — R$ 47</a>
+    </article>
+    <article class="step" data-reveal="rise" data-delay="180">
+      <span class="tag">Em preparação</span>
+      <h3>Curso ManiPronta</h3>
+      <div class="pr"><sup>R$</sup>337</div>
+      <p>O guia completo, mais explicações em vídeo curto e a análise de 3 fotos do seu trabalho. Ainda não está à venda: entre na lista de espera pelo direct.</p>
+      <a class="cta ghost" href="https://ig.me/m/manipronta.br" target="_blank" rel="noopener"><i></i>Lista de espera</a>
+    </article>
+  </div>
+  <p class="ladder-note">Ao clicar em «Quero o guia», o pagamento é por Pix logo abaixo. O curso só abre depois que o conteúdo estiver pronto.</p>
+</section>
+
+<section class="sec" id="pix">
+  <p class="eyebrow" data-reveal>Pagamento por Pix</p>
+  <h2 data-reveal>Guia ManiPronta: R$ 47 por Pix.</h2>
+  <div class="pix-grid" data-reveal="rise">
+    <div class="pix-card pix-qr">
+      <img src="assets/pix-qr-47.png" alt="QR Pix de R$ 47 para o Guia ManiPronta" width="340" height="340">
+      <strong>R$ 47,00</strong>
+      <small>Recebedor: DMITRII FEDOROV · Kast_Card · São Paulo</small>
     </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap grid">
-    <div>
-      <div class="kicker">Para quem é</div>
-      <h2>Serve para você que…</h2>
-      <ul class="list">
-        <li><span class="dot">•</span><span>Atende sozinha e quer padronizar o acabamento.</span></li>
-        <li><span class="dot">•</span><span>Trabalha com gel ou poligel e quer entender o porquê dos defeitos.</span></li>
-        <li><span class="dot">•</span><span>Quer parar de errar a cor no nude e no french.</span></li>
-        <li><span class="dot">•</span><span>Prefere estudar no próprio ritmo, pelo celular.</span></li>
-      </ul>
-    </div>
-    <div>
-      <div class="kicker">Para quem não é</div>
-      <h2>Não é para quem…</h2>
-      <ul class="list">
-        <li><span class="dot">•</span><span>Procura um curso em vídeo com acompanhamento ao vivo.</span></li>
-        <li><span class="dot">•</span><span>Quer garantia de agenda cheia, renda ou menos faltas.</span></li>
-        <li><span class="dot">•</span><span>Ainda não fez nenhuma unha e procura formação completa.</span></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-
-<section id="cores">
-  <div class="wrap">
-    <div class="kicker">Catálogo de cores</div>
-    <h2>Nove cores, uma mão.</h2>
-    <p class="sub">O mesmo acabamento, do nude ao chocolate. Escolha pela cliente, não pelo hábito.</p>
-    <div class="cat-grid">
-      <figure><img src="catalogo/nude.webp" alt="Unhas com esmalte nude rosé" width="480" height="853" loading="lazy"><figcaption><strong>Nude rosé</strong><span>original</span></figcaption></figure><figure><img src="catalogo/bordo.webp" alt="Unhas com esmalte bordô" width="480" height="853" loading="lazy"><figcaption><strong>Bordô</strong><span>#5A0F1E</span></figcaption></figure><figure><img src="catalogo/leitoso.webp" alt="Unhas com esmalte branco leitoso" width="480" height="853" loading="lazy"><figcaption><strong>Branco leitoso</strong><span>#F2EDE4</span></figcaption></figure><figure><img src="catalogo/preto.webp" alt="Unhas com esmalte preto" width="480" height="853" loading="lazy"><figcaption><strong>Preto</strong><span>#111111</span></figcaption></figure><figure><img src="catalogo/vermelho.webp" alt="Unhas com esmalte vermelho cereja" width="480" height="853" loading="lazy"><figcaption><strong>Vermelho cereja</strong><span>#C1121F</span></figcaption></figure><figure><img src="catalogo/rosa.webp" alt="Unhas com esmalte rosa" width="480" height="853" loading="lazy"><figcaption><strong>Rosa</strong><span>#E8A0B4</span></figcaption></figure><figure><img src="catalogo/chrome.webp" alt="Unhas com esmalte chrome" width="480" height="853" loading="lazy"><figcaption><strong>Chrome</strong><span>#C9CED6</span></figcaption></figure><figure><img src="catalogo/pistache.webp" alt="Unhas com esmalte pistache" width="480" height="853" loading="lazy"><figcaption><strong>Pistache</strong><span>#A8C686</span></figcaption></figure><figure><img src="catalogo/chocolate.webp" alt="Unhas com esmalte chocolate" width="480" height="853" loading="lazy"><figcaption><strong>Chocolate</strong><span>#5A3A2E</span></figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="kicker">Garantia</div>
-    <h2>7 dias para ler e decidir.</h2>
-    <p class="sub">Você recebe o PDF e tem 7 dias corridos para pedir o reembolso total pelo direct, sem precisar explicar o motivo. É o direito de arrependimento do Código de Defesa do Consumidor (art. 49).</p>
-  </div>
-</section>
-
-<section class="price" id="degraus">
-  <div class="wrap">
-    <div class="kicker">Escolha por onde começar</div>
-    <h2 style="margin-bottom:26px">Do grátis ao curso</h2>
-    <div class="grid" style="grid-template-columns:repeat(3,1fr);text-align:left">
-      <div class="card"><span class="num">PARA COMEÇAR</span><h3>Checklist grátis</h3><div class="amount" style="font-size:40px;font-weight:700;margin:6px 0">R$ 0</div><p>12 pontos para conferir cada unha em gel e a tabela de subtons. Uma página, sem cadastro.</p><p style="margin-top:14px"><a class="btn" href="checklist-manipronta.pdf" download style="padding:12px 18px;font-size:16px">Baixar</a></p></div>
-      <div class="card" style="border-color:var(--coral)"><span class="num">PREÇO DE ENTRADA</span><h3>Guia ManiPronta</h3><div class="amount" style="font-size:40px;font-weight:700;margin:6px 0">R$ 47</div><p>PDF com 6 módulos: preparo, cutícula, gel e poligel, formas, cor e durabilidade, mais 3 bônus e o catálogo de 9 cores. Enviado no direct após o Pix.</p><p style="margin-top:14px"><a class="btn" href="#pix" style="padding:12px 18px;font-size:16px">Quero o guia</a></p></div>
-      <div class="card"><span class="num">EM PREPARAÇÃO</span><h3>Curso ManiPronta</h3><div class="amount" style="font-size:40px;font-weight:700;margin:6px 0">R$ 337</div><p>Guia completo mais explicações em vídeo curto e análise de 3 fotos do seu trabalho. Ainda não está à venda. Entre na lista de espera pelo direct.</p><p style="margin-top:14px"><a class="btn ghost" href="https://ig.me/m/manipronta.br" target="_blank" rel="noopener" style="padding:12px 18px;font-size:16px">Lista de espera</a></p></div>
-    </div>
-    <p class="note" style="margin-top:20px">Ao clicar em «Quero o guia», o pagamento é por Pix logo abaixo. O curso só abre depois que o conteúdo estiver pronto.</p>
-  </div>
-</section>
-
-<section class="faq">
-  <div class="wrap">
-    <div class="kicker">Perguntas</div>
-    <h2>Antes de comprar</h2>
-    <details><summary>É vídeo ou PDF?</summary><p>É um PDF completo, para ler no celular ou imprimir. Sem vídeos e sem aulas ao vivo.</p></details>
-    <details><summary>Preciso de experiência?</summary><p>O guia assume que você já atende e quer melhorar o acabamento. Se nunca fez uma unha, não é o material certo para começar.</p></details>
-    <details><summary>Serve para quem trabalha com gel?</summary><p>Sim. O módulo 3 trata de base, camadas, arquitetura e dos erros que fazem o gel levantar.</p></details>
-    <details><summary>Como recebo?</summary><p>Depois da confirmação do pagamento, o PDF é enviado no próprio direct.</p></details>
-    <details><summary>Quem vende e como falo com vocês?</summary><p>A ManiPronta é uma marca de materiais educativos. Os dados de quem vende estão no rodapé, e o atendimento é pelo direct do Instagram @manipronta.br.</p></details>
-    <details><summary>E o curso de R$ 337?</summary><p>Está em preparação e ainda não está à venda. Quem entrar na lista de espera pelo direct é avisada quando abrir.</p></details>
-    <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias para pedir o reembolso total, sem justificar.</p></details>
-  </div>
-</section>
-
-
-<section id="pix" style="padding:56px 0;border-top:1px solid var(--line)">
-  <div class="wrap">
-    <div class="kicker">Pagamento por Pix</div>
-    <h2>Guia ManiPronta: R$ 47 por Pix.</h2>
-    <p class="sub" style="max-width:720px">Abra o app do seu banco, escolha Pix, leia o QR ou cole o código. Confira o valor e o recebedor antes de confirmar. Depois envie o comprovante no direct — o PDF chega na conversa.</p>
-    <div class="grid" style="margin-top:26px;align-items:start">
-      <div class="card" style="text-align:center;background:#fff;color:#1E1119">
-        <img src="pix/qr-47.png" alt="QR Pix de R$ 47 para o Guia ManiPronta" style="width:100%;max-width:320px;height:auto;display:block;margin:0 auto 14px">
-        <strong style="font-size:18px">R$ 47,00</strong>
-        <div style="font-size:13px;color:#6b5b64;margin-top:6px">Recebedor: DMITRII FEDOROV · Kast_Card · São Paulo</div>
-      </div>
-      <div class="card">
-        <h3>Pix copia e cola</h3>
-        <p style="font-size:13px;color:#E8D9D2;word-break:break-all;background:rgba(0,0,0,.25);padding:12px;border-radius:8px" id="pixcode">00020126770014br.gov.bcb.pix0136ff439919-4119-405d-838a-6c3e3efd8b550215DMITRII_FEDOROV520400005303986540547.005802BR5909Kast_Card6009Sao Paulo6229052547cede5d51e24cf29097b8daa63042BB9</p>
-        <button class="btn" type="button" onclick="navigator.clipboard.writeText(document.getElementById('pixcode').innerText);this.innerText='Copiado ✓'" style="border:0;cursor:pointer">Copiar código Pix</button>
-        <p class="note" style="margin-top:16px">Confira no app do banco: valor R$ 47,00 e recebedor DMITRII FEDOROV. Se o nome não bater, não confirme.</p>
-        <h3 style="margin-top:26px">Depois de pagar</h3>
-        <p style="font-size:14px;color:#E8D9D2">Envie o comprovante no direct. O PDF é entregue na conversa após a confirmação.</p>
-        <a class="btn" href="https://ig.me/m/manipronta.br" target="_blank" rel="noopener" style="margin-top:6px">Enviar comprovante no direct</a>
-      </div>
+    <div class="pix-card">
+      <h3>Pix copia e cola</h3>
+      <code id="pixcode">00020126770014br.gov.bcb.pix0136ff439919-4119-405d-838a-6c3e3efd8b550215DMITRII_FEDOROV520400005303986540547.005802BR5909Kast_Card6009Sao Paulo6229052547cede5d51e24cf29097b8daa63042BB9</code>
+      <button class="cta" type="button" id="pixcopy"><i></i><span>Copiar código Pix</span></button>
+      <ol class="pix-steps">
+        <li>Abra o app do seu banco e escolha Pix.</li>
+        <li>Leia o QR ou cole o código acima.</li>
+        <li>Confira R$ 47,00 e o recebedor DMITRII FEDOROV.</li>
+        <li>Pague e envie o comprovante no direct.</li>
+      </ol>
+      <a class="cta" href="https://ig.me/m/manipronta.br" target="_blank" rel="noopener"><i></i><span>Enviar comprovante no direct</span></a>
+      <p class="pix-note">O PDF é entregue na conversa depois da confirmação. Se o nome do recebedor não bater com o do seu banco, não confirme o pagamento.</p>
     </div>
   </div>
 </section>
 
-<footer>
-  <div class="wrap">
-    <p><strong>ManiPronta</strong> — materiais de apoio para manicures. Não somos um salão.</p>
-    <p>Conteúdo educativo. Não substitui prática supervisionada nem formação técnica completa. Não garantimos resultados, renda ou número de clientes.</p>
-    <p>Imagens ilustrativas. © 2026 ManiPronta.</p>
-    <p><strong>Quem vende:</strong> Dmitrii Fedorov, São Paulo/SP, responsável pela ManiPronta. <strong>Atendimento e suporte:</strong> direct do Instagram <a href="https://instagram.com/manipronta.br" target="_blank" rel="noopener">@manipronta.br</a>, resposta em até 2 dias úteis. <strong>Arrependimento e reembolso:</strong> 7 dias corridos após o recebimento, pelo mesmo direct, sem justificativa (CDC, art. 49).</p>
-  </div>
+<section class="sec faq" id="faq">
+  <span class="eyebrow">Dúvidas</span>
+  <h2 data-split="lines" data-reveal="up">Antes de comprar.</h2>
+  <details><summary>É vídeo ou PDF?</summary><p>O guia é um PDF para ler no celular, tablet ou computador, ou imprimir. Sem vídeos e sem aulas ao vivo. Os vídeos curtos virão no curso.</p></details>
+  <details><summary>Preciso de experiência?</summary><p>O guia ajuda quem já atende a padronizar técnica, formato e cor. Quem nunca fez uma unha pode ler, mas ele não substitui formação nem prática supervisionada.</p></details>
+  <details><summary>Serve para gel e poligel?</summary><p>Sim. Há um módulo dedicado a gel e poligel, além de formas, lixamento, cor e durabilidade.</p></details>
+  <details><summary>Como recebo o guia?</summary><p>Você paga por Pix, envia o comprovante no direct do Instagram @manipronta.br e recebe o PDF na conversa depois da confirmação.</p></details>
+  <details><summary>Quem vende e como falo com vocês?</summary><p>A ManiPronta é uma marca de materiais educativos. Os dados de quem vende estão no rodapé, e o atendimento é pelo direct do Instagram, com resposta em até 2 dias úteis.</p></details>
+  <details><summary>E o curso de R$ 337?</summary><p>Está em preparação e ainda não está à venda. Quem entrar na lista de espera pelo direct é avisada quando abrir.</p></details>
+  <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias corridos para pedir o reembolso total pelo mesmo direct, sem justificar. É o direito de arrependimento do Código de Defesa do Consumidor (art. 49).</p></details>
+</section>
+</main>
+<footer class="foot">
+  <h2 data-split="chars" data-reveal="up" data-stagger="40">ManiPronta</h2>
+  <i class="rl" data-rule></i>
+  <p>Conteúdo educativo. Não substitui prática supervisionada e não garante resultado. Os resultados dependem de prática, materiais e cada cliente.</p>
+  <p class="seller"><b>Quem vende:</b> Dmitrii Fedorov, São Paulo/SP, responsável pela ManiPronta. <b>Atendimento e suporte:</b> direct do Instagram <a href="https://instagram.com/manipronta.br" target="_blank" rel="noopener">@manipronta.br</a>, resposta em até 2 dias úteis. <b>Arrependimento e reembolso:</b> 7 dias corridos após o recebimento, pelo mesmo direct, sem justificativa (CDC, art. 49).</p>
+  <div class="fr"><span>© 2026 ManiPronta · imagens ilustrativas</span><a href="https://instagram.com/manipronta.br" target="_blank" rel="noopener">@manipronta.br</a></div>
 </footer>
 
+<script>
+/* header: transparent only at the very top, solid plum once scrolled; hides on scroll down, shows on scroll up */
+(()=>{const h=document.querySelector(".hdr"),hero=document.querySelector(".hero");let last=scrollY,tick=false;
+const upd=()=>{tick=false;const y=scrollY,d=y-last,hh=h.offsetHeight,past=y>hero.offsetHeight-hh;
+h.classList.toggle("solid",y>8);
+if(!past||y<=0)h.classList.remove("hide");else if(d>6)h.classList.add("hide");else if(d<-6)h.classList.remove("hide");
+if(Math.abs(d)>6||!past)last=y;};
+addEventListener("scroll",()=>{if(!tick){tick=true;requestAnimationFrame(upd)}},{passive:true});
+h.addEventListener("focusin",()=>h.classList.remove("hide"));upd();})();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.19/dist/lenis.min.js"></script>
+<script type="module">
+import { M } from "./motion.js";
+M.start({ preloader: "#pre", media: ["assets/film-poster.jpg", "assets/logo-white.webp"], min: 900 });
+</script>
+<script>
+(function(){var b=document.getElementById('pixcopy');if(!b)return;b.addEventListener('click',function(){var t=document.getElementById('pixcode').textContent.trim();var done=function(){var s=b.querySelector('span');if(!s)return;s.textContent='Copiado ✓';setTimeout(function(){s.textContent='Copiar código Pix'},2200)};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done)}else{var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy')}catch(e){}a.remove();done()}})}());
+</script>
 </body>
 </html>

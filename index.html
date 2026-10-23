@@ -47,7 +47,7 @@
   .faq p{margin:10px 0 0;color:#E8D9D2}
   footer{padding:36px 0;color:var(--muted);font-size:13px}
   .tag{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:13px;color:var(--coral);margin:0 8px 8px 0}
-  @media (max-width:760px){.grid{grid-template-columns:1fr}.hero{padding:36px 0 30px}}
+  @media (max-width:760px){.grid,#degraus .grid{grid-template-columns:1fr!important}.hero{padding:36px 0 30px}}
 
   .cat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:26px}
   .cat-grid figure{margin:0;background:var(--plum2);border:1px solid var(--line);border-radius:12px;overflow:hidden}
@@ -67,10 +67,10 @@
     <h1>Acabamento de salão, do preparo à cor.</h1>
     <p class="sub">Para manicures que querem entregar cutícula limpa, formato perfeito e cor que dura — com um passo a passo claro, sem tentativa e erro.</p>
     <div class="actions">
-      <a class="btn" href="https://ig.me/m/manipronta.br" target="_blank" rel="noopener">Quero o guia — R$ 337</a>
-      <a class="btn ghost" href="#conteudo">Ver o que tem dentro</a>
+      <a class="btn" href="checklist-manipronta.pdf" download>Baixar o checklist grátis</a>
+      <a class="btn ghost" href="#pix">Quero o guia — R$ 47</a>
     </div>
-    <p class="note">Pagamento combinado no direct (Pix ou cartão). O PDF é enviado após a confirmação.</p>
+    <p class="note">Checklist de 12 pontos e tabela de subtons, grátis, sem cadastro. O guia completo é pago por Pix e enviado no direct após a confirmação.</p>
   </div>
 </header>
 
@@ -146,14 +146,16 @@
   </div>
 </section>
 
-<section class="price">
+<section class="price" id="degraus">
   <div class="wrap">
-    <div class="kicker">O guia completo</div>
-    <h2 style="margin-bottom:6px">Guia ManiPronta</h2>
-    <div class="amount">R$ 337</div>
-    <div class="terms">Pix ou cartão · acesso ao PDF após a confirmação</div>
-    <a class="btn" href="https://ig.me/m/manipronta.br" target="_blank" rel="noopener">Quero o guia</a>
-    <p class="note">Ao clicar, abre o direct do @manipronta.br com a mensagem já pronta.</p>
+    <div class="kicker">Escolha por onde começar</div>
+    <h2 style="margin-bottom:26px">Do grátis ao curso</h2>
+    <div class="grid" style="grid-template-columns:repeat(3,1fr);text-align:left">
+      <div class="card"><span class="num">PARA COMEÇAR</span><h3>Checklist grátis</h3><div class="amount" style="font-size:40px;font-weight:700;margin:6px 0">R$ 0</div><p>12 pontos para conferir cada unha em gel e a tabela de subtons. Uma página, sem cadastro.</p><p style="margin-top:14px"><a class="btn" href="checklist-manipronta.pdf" download style="padding:12px 18px;font-size:16px">Baixar</a></p></div>
+      <div class="card" style="border-color:var(--coral)"><span class="num">PREÇO DE ENTRADA</span><h3>Guia ManiPronta</h3><div class="amount" style="font-size:40px;font-weight:700;margin:6px 0">R$ 47</div><p>PDF com 6 módulos: preparo, cutícula, gel e poligel, formas, cor e durabilidade, mais 3 bônus e o catálogo de 9 cores. Enviado no direct após o Pix.</p><p style="margin-top:14px"><a class="btn" href="#pix" style="padding:12px 18px;font-size:16px">Quero o guia</a></p></div>
+      <div class="card"><span class="num">EM PREPARAÇÃO</span><h3>Curso ManiPronta</h3><div class="amount" style="font-size:40px;font-weight:700;margin:6px 0">R$ 337</div><p>Guia completo mais explicações em vídeo curto e análise de 3 fotos do seu trabalho. Ainda não está à venda. Entre na lista de espera pelo direct.</p><p style="margin-top:14px"><a class="btn ghost" href="https://ig.me/m/manipronta.br" target="_blank" rel="noopener" style="padding:12px 18px;font-size:16px">Lista de espera</a></p></div>
+    </div>
+    <p class="note" style="margin-top:20px">Ao clicar em «Quero o guia», o pagamento é por Pix logo abaixo. O curso só abre depois que o conteúdo estiver pronto.</p>
   </div>
 </section>
 
@@ -165,6 +167,8 @@
     <details><summary>Preciso de experiência?</summary><p>O guia assume que você já atende e quer melhorar o acabamento. Se nunca fez uma unha, não é o material certo para começar.</p></details>
     <details><summary>Serve para quem trabalha com gel?</summary><p>Sim. O módulo 3 trata de base, camadas, arquitetura e dos erros que fazem o gel levantar.</p></details>
     <details><summary>Como recebo?</summary><p>Depois da confirmação do pagamento, o PDF é enviado no próprio direct.</p></details>
+    <details><summary>Quem vende e como falo com vocês?</summary><p>A ManiPronta é uma marca de materiais educativos. Os dados de quem vende estão no rodapé, e o atendimento é pelo direct do Instagram @manipronta.br.</p></details>
+    <details><summary>E o curso de R$ 337?</summary><p>Está em preparação e ainda não está à venda. Quem entrar na lista de espera pelo direct é avisada quando abrir.</p></details>
     <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias para pedir o reembolso total, sem justificar.</p></details>
   </div>
 </section>
@@ -173,19 +177,19 @@
 <section id="pix" style="padding:56px 0;border-top:1px solid var(--line)">
   <div class="wrap">
     <div class="kicker">Pagamento por Pix</div>
-    <h2>R$ 337 à vista, por Pix.</h2>
+    <h2>Guia ManiPronta: R$ 47 por Pix.</h2>
     <p class="sub" style="max-width:720px">Abra o app do seu banco, escolha Pix, leia o QR ou cole o código. Confira o valor e o recebedor antes de confirmar. Depois envie o comprovante no direct — o PDF chega na conversa.</p>
     <div class="grid" style="margin-top:26px;align-items:start">
       <div class="card" style="text-align:center;background:#fff;color:#1E1119">
-        <img src="pix/qr-337.png" alt="QR Pix de R$ 337 para o Guia ManiPronta" style="width:100%;max-width:320px;height:auto;display:block;margin:0 auto 14px">
-        <strong style="font-size:18px">R$ 337,00</strong>
+        <img src="pix/qr-47.png" alt="QR Pix de R$ 47 para o Guia ManiPronta" style="width:100%;max-width:320px;height:auto;display:block;margin:0 auto 14px">
+        <strong style="font-size:18px">R$ 47,00</strong>
         <div style="font-size:13px;color:#6b5b64;margin-top:6px">Recebedor: DMITRII FEDOROV · Kast_Card · São Paulo</div>
       </div>
       <div class="card">
         <h3>Pix copia e cola</h3>
-        <p style="font-size:13px;color:#E8D9D2;word-break:break-all;background:rgba(0,0,0,.25);padding:12px;border-radius:8px" id="pixcode">00020126770014br.gov.bcb.pix0136ff439919-4119-405d-838a-6c3e3efd8b550215DMITRII_FEDOROV5204000053039865406337.005802BR5909Kast_Card6009Sao Paulo6229052547cede5d51e24cf29097b8daa63041934</p>
+        <p style="font-size:13px;color:#E8D9D2;word-break:break-all;background:rgba(0,0,0,.25);padding:12px;border-radius:8px" id="pixcode">00020126770014br.gov.bcb.pix0136ff439919-4119-405d-838a-6c3e3efd8b550215DMITRII_FEDOROV520400005303986540547.005802BR5909Kast_Card6009Sao Paulo6229052547cede5d51e24cf29097b8daa63042BB9</p>
         <button class="btn" type="button" onclick="navigator.clipboard.writeText(document.getElementById('pixcode').innerText);this.innerText='Copiado ✓'" style="border:0;cursor:pointer">Copiar código Pix</button>
-        <p class="note" style="margin-top:16px">Confira no app do banco: valor R$ 337,00 e recebedor DMITRII FEDOROV. Se o nome não bater, não confirme.</p>
+        <p class="note" style="margin-top:16px">Confira no app do banco: valor R$ 47,00 e recebedor DMITRII FEDOROV. Se o nome não bater, não confirme.</p>
         <h3 style="margin-top:26px">Depois de pagar</h3>
         <p style="font-size:14px;color:#E8D9D2">Envie o comprovante no direct. O PDF é entregue na conversa após a confirmação.</p>
         <a class="btn" href="https://ig.me/m/manipronta.br" target="_blank" rel="noopener" style="margin-top:6px">Enviar comprovante no direct</a>
@@ -199,6 +203,7 @@
     <p><strong>ManiPronta</strong> — materiais de apoio para manicures. Não somos um salão.</p>
     <p>Conteúdo educativo. Não substitui prática supervisionada nem formação técnica completa. Não garantimos resultados, renda ou número de clientes.</p>
     <p>Imagens ilustrativas. © 2026 ManiPronta.</p>
+    <p><strong>Quem vende:</strong> Dmitrii Fedorov, São Paulo/SP, responsável pela ManiPronta. <strong>Atendimento e suporte:</strong> direct do Instagram <a href="https://instagram.com/manipronta.br" target="_blank" rel="noopener">@manipronta.br</a>, resposta em até 2 dias úteis. <strong>Arrependimento e reembolso:</strong> 7 dias corridos após o recebimento, pelo mesmo direct, sem justificativa (CDC, art. 49).</p>
   </div>
 </footer>
 

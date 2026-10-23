@@ -170,6 +170,17 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.03em}
 .seller{display:block;margin-top:14px}
 .seller b{color:var(--ivory)}
 
+
+/* subtom test */
+.subtom-row{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(24px,5vw,72px);align-items:center}
+.subtom-q{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.subtom-q li{display:flex;gap:18px;align-items:center;background:var(--plum-2);border-radius:18px;padding:20px 24px}
+.subtom-q b{flex:none;width:44px;height:44px;border-radius:50%;background:var(--coral);color:var(--plum);display:grid;place-items:center;font:400 22px/1 var(--serif)}
+.subtom-q span{font:400 clamp(18px,1.8vw,24px)/1.25 var(--serif);letter-spacing:-.01em}
+.subtom-cta p{color:var(--muted);max-width:44ch;margin-bottom:22px}
+.subtom-cta small{display:block;margin-top:14px;color:var(--muted);font-size:13px}
+@media(max-width:800px){.subtom-row{grid-template-columns:1fr}}
+
 /* 7 faq */
 .faq{max-width:900px}
 .faq details{border-top:1px solid rgba(247,239,234,.22)}
@@ -258,6 +269,23 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.03em}
     <li data-reveal="rise" data-delay="120"><figure><div class="ph"><img src="assets/catalogo/pistache.webp" alt="Unhas com esmalte verde pistache" width="720" height="1279" loading="lazy" decoding="async"></div><figcaption><b>Pistache</b><code style="--c:#A8C686"><i></i>#A8C686</code></figcaption></figure></li>
     <li data-reveal="rise" data-delay="180"><figure><div class="ph"><img src="assets/catalogo/chocolate.webp" alt="Unhas com esmalte chocolate" width="720" height="1279" loading="lazy" decoding="async"></div><figcaption><b>Chocolate</b><code style="--c:#5A3A2E"><i></i>#5A3A2E</code></figcaption></figure></li>
   </ul>
+</section>
+
+<section class="sec subtom" id="teste">
+  <span class="eyebrow">Teste grátis no Telegram</span>
+  <h2 data-split="lines" data-reveal="up">Qual é o seu subtom?</h2>
+  <div class="subtom-row">
+    <ol class="subtom-q" data-reveal="rise">
+      <li><b>1</b><span>Como estão as veias do pulso: esverdeadas ou azuladas?</span></li>
+      <li><b>2</b><span>Ouro ou prata: qual favorece mais a sua pele?</span></li>
+      <li><b>3</b><span>Ao sol, a pele costuma dourar ou ficar rosada?</span></li>
+    </ol>
+    <div class="subtom-cta" data-reveal="rise" data-delay="120">
+      <p>Em 3 perguntas você descobre se o seu subtom é quente, frio ou neutro e quais cores de esmalte costumam favorecer. Sem foto, sem cadastro.</p>
+      <a class="cta" href="https://t.me/manipronta_subtom_bot" target="_blank" rel="noopener" data-magnetic="0.3"><i></i>Fazer o teste no Telegram</a>
+      <small>Conteúdo educativo: orientação de cor, não é diagnóstico.</small>
+    </div>
+  </div>
 </section>
 
 <section class="sec" id="galeria">
